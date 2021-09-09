@@ -1,7 +1,5 @@
 package com.example.billing.order;
 
-import com.example.billing.services.Service;
-
 import javax.persistence.*;
 
 @Entity
@@ -12,8 +10,7 @@ public class Order {
     private long id;
     private Long orderId;
     private Boolean selected;
-    @OneToOne
-    private Service service;
+    private String service;
     private Integer quantity;
     private Boolean pay;
     private Boolean payableByInsurance;
@@ -22,13 +19,14 @@ public class Order {
     public Order() {
 
     }
-    public Order(Long orderId, Boolean selected, Integer quantity, Boolean pay, Boolean payableByInsurance, Integer unitPrice) {
+    public Order(Long orderId, Boolean selected, Integer quantity, Boolean pay, Boolean payableByInsurance, Integer unitPrice, String service) {
         this.orderId = orderId;
         this.selected = selected;
         this.quantity = quantity;
         this.pay = pay;
         this.payableByInsurance = payableByInsurance;
         this.unitPrice = unitPrice;
+        this.service=service;
     }
 
 
@@ -56,11 +54,11 @@ public class Order {
         this.selected = selected;
     }
 
-    public Service getService() {
+    public String getService() {
         return service;
     }
 
-    public void setService(Service service) {
+    public void setService(String service) {
         this.service = service;
     }
 

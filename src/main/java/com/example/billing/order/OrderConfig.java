@@ -18,8 +18,9 @@ public class OrderConfig {
                     true,
                     1,
                     true,
-                    true,
-                    2000
+                    false,
+                    100,
+                    "Registration"
 
 
             );
@@ -28,11 +29,21 @@ public class OrderConfig {
                     true,
                     1,
                     true,
+                    true,
+                    2500,
+                    "Pharmacy"
+            );
+            Order thirdOrder= new Order(
+                    204L,
+                    true,
+                    1,
+                    true,
                     false,
-                    2500
+                    500,
+                    "Consultation fees"
             );
 
-            repository.saveAll(List.of(firstOrder, secondOrder));
+            repository.saveAll(List.of(firstOrder, secondOrder, thirdOrder));
         };
     }
 }
