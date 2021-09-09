@@ -12,11 +12,11 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
-    public List<Patient>getAllPatients(){
+    List<Patient>getAllPatients(){
         return patientRepository.findAll();
     }
 
-    public void addPatient(Patient patient) {
+    void addPatient(Patient patient) {
         patientRepository.save(patient);
     }
 }
