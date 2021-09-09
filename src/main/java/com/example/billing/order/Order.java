@@ -3,7 +3,6 @@ package com.example.billing.order;
 import com.example.billing.services.Service;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table
@@ -13,8 +12,8 @@ public class Order {
     private long id;
     private Long orderId;
     private Boolean selected;
-    @ManyToMany
-    private Set<Service> service;
+    @OneToOne
+    private Service service;
     private Integer quantity;
     private Boolean pay;
     private Boolean payableByInsurance;
@@ -57,11 +56,11 @@ public class Order {
         this.selected = selected;
     }
 
-    public Set<Service> getService() {
+    public Service getService() {
         return service;
     }
 
-    public void setService(Set<Service> service) {
+    public void setService(Service service) {
         this.service = service;
     }
 

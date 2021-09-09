@@ -8,6 +8,7 @@ import java.util.List;
 
 @Configuration
 public class OrderConfig {
+
     @Bean
     CommandLineRunner ordercommandLineRunner(
             OrderRepository repository){
@@ -19,6 +20,8 @@ public class OrderConfig {
                     true,
                     true,
                     2000
+
+
             );
             Order secondOrder= new Order(
                     203L,
