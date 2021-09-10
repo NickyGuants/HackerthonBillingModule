@@ -27,6 +27,41 @@
 .App-link {
   color: #61dafb;
 }
+h1 {
+  text-align: justify;
+  font-family: arial, sans-serif;
+  font-size: medium;
+}
+#orders{
+  text-align: center;
+  width: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+}
+
+table td, table th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+#Amount{
+  text-align: justify;
+  width: 50%;
+  margin-right: 0px;
+}
+button{
+  background: blue;
+  color: white;
+}
+
 
 @keyframes App-logo-spin {
   from {
