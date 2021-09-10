@@ -15,6 +15,48 @@ public class Order {
     private Boolean pay;
     private Boolean payableByInsurance;
     private Integer unitPrice;
+    private Integer itemTotal;
+    private Integer totalAmount;
+
+    public Integer getTotalAmount() {
+        totalAmount = unitPrice;
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Integer totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public Integer getInsuranceAmount() {
+        return insuranceAmount;
+    }
+
+    public void setInsuranceAmount(Integer insuranceAmount) {
+        this.insuranceAmount = insuranceAmount;
+    }
+
+    public Integer getCashAmount() {
+        return cashAmount;
+    }
+
+    public void setCashAmount(Integer cashAmount) {
+        this.cashAmount = cashAmount;
+    }
+
+    private Integer insuranceAmount;
+    private Integer cashAmount;
+
+    public Integer getItemTotal() {
+        itemTotal=this.quantity*this.unitPrice;
+        return itemTotal;
+    }
+
+
+    public void setItemTotal(Integer itemTotal) {
+        this.itemTotal = itemTotal;
+    }
+
+
 
     public Order() {
 
