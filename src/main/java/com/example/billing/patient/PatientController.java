@@ -6,7 +6,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping()
+@RequestMapping
 public class PatientController {
 
     private final PatientService patientService;
