@@ -32,6 +32,7 @@ public class OrderConfig {
                     true,
                     2500,
                     "Pharmacy"
+
             );
             Order thirdOrder= new Order(
                     204L,
