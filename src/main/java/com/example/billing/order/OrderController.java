@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping
+@RequestMapping()
 @RestController
 public class OrderController {
     private final OrderService orderService;
